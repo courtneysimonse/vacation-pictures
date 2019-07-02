@@ -10,7 +10,8 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin=""/>
     <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <!-- <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"> -->
+    <link type="text/css" rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
     <!-- Leaflet.markercluster Plugin -->
   	<link rel="stylesheet" href="vendor/markercluster/MarkerCluster.css" />
@@ -23,27 +24,61 @@
 
   <body>
 
-    <h1>Sicily to the US: 1880-1900</h1>
-
     <div class='container-fluid'>
       <div class="row">
-        <div class="col-sm col-xs-6 m-0 p-0">
-          <div id='words'></div>
+        <div class="col-sm col-xs-6" id="words">
+
+          <h1 class="page-header">Sicily Trip 2019</h1>
+
+            <section data-place="overview">
+              <p>A great trip!</p>
+            </section>
+
+            <section data-place="atlanta">
+              <p>We started our trip at the Atlanta airport. Mom was looking stylish in her glasses. We were all excited and ready to go!</p>
+            </section>
+
+            <section data-place="heathrow">
+              <p>We had a layover at Heathrow airport in London. They had some different security protocols.</p>
+            </section>
+
+            <section data-place="geneva">
+              <p>We stayed at Geneva our first and last nights of the trip. The restaurant across the street from our Airbnb was great!</p>
+            </section>
+
+            <section data-place="sicily">
+              <p>Finally made it to the Mother Country!</p>
+            </section>
+
+            <section data-place="ortigia">
+              <p>We stayed on the island of Ortigia, the old town in Syracuse.</p>
+            </section>
+
+            <section data-place="noto">
+              <p>Our ill-fated trip to the Baroque hill-town of Noto left Nancy and I carsick!</p>
+            </section>
+
+            <section data-place="mtEtna">
+              <p>Mom and Connie Sue went on a hike up Mt. Etna.</p>
+            </section>
+
+            <section data-place="augusta">
+              <p>We wandered around Augusta looking for landmarks attached to our roots.</p>
+            </section>
+
         </div>
-        <div class="col-sm col-xs-6 m-0 p-0">
-          <div id='map'></div>
-        </div>
-        <div class="row m-0">
+        <div class="col-sm col-xs-6 sidebar" id="map"></div>
+        <!-- <div class="row m-0">
           <div class='col-12 my-4 mx-1 justify-end fixed-bottom' id='buttons'>
             <button type="button" class="btn btn-primary info" data-toggle="modal" data-target="#infoModal">
               Info
             </button>
-          </div>
+          </div> -->
           <!-- <div class='col-12 mx-3 my-2 fixed-bottom' id="ui-controls">
             <div id="handle-1" class="ui-slider-handle"></div>
             <div id="handle-2" class="ui-slider-handle"></div>
           </div> -->
-        </div>
+        <!-- </div> -->
       </div>
     </div>
 
@@ -74,6 +109,7 @@
 
     <script src="https://code.jquery.com/jquery-3.4.0.min.js"></script>
     <script src="http://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.9.1/underscore-min.js" integrity="sha256-G7A4JrJjJlFqP0yamznwPjAApIKPkadeHfyIwiaa9e0=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.0.0/papaparse.min.js"></script>
     <!-- Bootstrap JavaScript -->
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -86,6 +122,8 @@
     <!-- then load CanvasFlowMapLayer -->
     <!-- <script src="vendor/Leaflet.Canvas-Flowmap-Layer/src/CanvasFlowmapLayer.js"></script> -->
 
+    <!-- Storymap plugin -->
+    <script src="vendor/storymap/storymap.js"></script>
     <script src="js/app.js"></script>
 
     <script>
