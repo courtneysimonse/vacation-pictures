@@ -69,4 +69,5 @@ html, body {
 section {
     padding: 5px 10px 10px 10px;
     border-radius: 10px;
+    min-height: 80vh;
 }
