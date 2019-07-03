@@ -3,9 +3,8 @@
   // map options
   var options = {
         zoomSnap: .5,
-        center: [33.7, -84.4],
-        zoom: 9,
-        minZoom: 2,
+        center: [0, 0],
+        zoom: 1,
         zoomControl: false,
         attributionControl: false
       }
@@ -22,26 +21,26 @@
 
   // var flowmapLayer = L.layerGroup();
   // var copyFlowmapLayer = L.layerGroup(); // use copy to add layer to second map
-  var markers = L.markerClusterGroup({
-    showCoverageOnHover: false,
-    maxClusterRadius: 30,
-    chunkedLoading: true
-  });
-  var markerOptions = {
-    radius: 5,
-    color: '#de2d26'
-  }
+  // var markers = L.markerClusterGroup({
+  //   showCoverageOnHover: false,
+  //   maxClusterRadius: 30,
+  //   chunkedLoading: true
+  // });
+  // var markerOptions = {
+  //   radius: 5,
+  //   color: '#de2d26'
+  // }
 
   // points for map to zoom to
   var points = {
-    atlanta: {lat: 33.7, lon: -84.4, zoom: 9},
-    heathrow: {lat: 51.5, lon: 0.5, zoom: 11},
-    geneva: {lat: 46.2, lon: 6.1, zoom: 10},
-    sicily: {lat: 37.6, lon: 14.0, zoom: 7},
-    ortigia: {lat: 37.1, lon: 15.3, zoom: 10},
-    noto: {lat: 36.9, lon: 15.1, zoom: 10},
-    mtEtna: {lat: 37.8, lon: 15.0, zoom: 10},
-    augusta: {lat: 37.2, lon: 15.2, zoom: 10}
+    atlanta: {lat: 33.6407, lon: -84.4277, zoom: 9},
+    heathrow: {lat: 51.4700, lon: 0.4543, zoom: 11},
+    geneva: {lat: 46.2044, lon: 6.1432, zoom: 11},
+    sicily: {lat: 37.6000, lon: 14.0154, zoom: 7},
+    ortygia: {lat: 37.0609, lon: 15.2941, zoom: 11},
+    noto: {lat: 36.8924, lon: 15.0652, zoom: 11},
+    mtEtna: {lat: 37.7510, lon: 14.9934, zoom: 10},
+    augusta: {lat: 37.2250, lon: 15.2217, zoom: 14.5}
   }
 
   $('#words').storymap({
@@ -53,6 +52,10 @@
       	subdomains: 'abcd',
       	maxZoom: 19
       }).addTo(map);
+
+      // add photos
+
+
       return map;
     }
   });
