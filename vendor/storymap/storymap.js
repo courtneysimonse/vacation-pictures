@@ -17,10 +17,15 @@
                 }).addTo(map);
 
                 return map;
+            },
+            markerOptions: {
+              radius: 5,
+              color: '#de2d26'
             }
         };
 
         var settings = $.extend(defaults, options);
+        console.log(settings);
 
 
         if (typeof(L) === 'undefined') {
@@ -77,7 +82,7 @@
             });
         }
 
-        var makeStoryMap = function (element, markers) {
+        var makeStoryMap = function (element, markers, markerOptions) {
 
             var topElem = $('<div class="breakpoint-current"></div>')
                 .css('top', settings.breakpointPos);
@@ -117,7 +122,8 @@
                     if(typeof layer !== 'undefined'){
                       fg.addLayer(layer);
                     };
-                    fg.addLayer(L.marker([marker.lat, marker.lon]));
+                    // change to circleMarker so marker is more easily customized
+                    fg.addLayer(L.circleMarker([marker.lat, marker.lon], markerOptions));
 
                     map.setView([marker.lat, marker.lon], marker.zoom, 1);
                 }
@@ -129,7 +135,7 @@
             });
         };
 
-        makeStoryMap(this, settings.markers);
+        makeStoryMap(this, settings.markers, settings.markerOptions);
 
         return this;
     }
