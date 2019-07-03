@@ -43,11 +43,11 @@
     },
     geneva: {
       center: {lat: 46.2044, lon: 6.1432, zoom: 11},
-      photos: {url: "photos/fav_restaurant_geneva.jpg", lat: 46.2044, lon: 6.1432}
+      photos: {url: "photos/fav_restaurant_geneva.jpg", lat: 46.2100849, lon: 6.1482021}
     },
     sicily: {
       center: {lat: 37.6000, lon: 14.0154, zoom: 7},
-      photos: {url: "photos/plane_to_Catania.jpg", lat: 37.6000, lon: 14.0154}
+      photos: {url: "photos/plane_to_Catania.jpg", lat: 37.4666648, lon: 15.0583331}
     },
     ortygia: {
       center: {lat: 37.0609, lon: 15.2941, zoom: 11},
