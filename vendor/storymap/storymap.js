@@ -25,7 +25,6 @@
         };
 
         var settings = $.extend(defaults, options);
-        console.log(settings);
 
 
         if (typeof(L) === 'undefined') {
@@ -118,13 +117,19 @@
                     map.setView(initPoint, initZoom, true);
                 } else if (markers[key]) {
                     var marker = markers[key];
-                    var center = marker.center
+                    var center = marker.center;
+                    var photos = marker.photos;
                     var layer = marker.layer;
                     if(typeof layer !== 'undefined'){
                       fg.addLayer(layer);
                     };
                     // change to circleMarker so marker is more easily customized
-                    fg.addLayer(L.circleMarker([center.lat, center.lon], markerOptions));
+                    //fg.addLayer(L.circleMarker([center.lat, center.lon], markerOptions));
+
+                    // add photos
+                    var point = L.circleMarker([photos.lat, photos.lon], markerOptions)
+                      .bindTooltip("<img class='tooltip-image' src='"+photos.url+"'>");
+                    fg.addLayer(point);
 
                     map.setView([center.lat, center.lon], center.zoom, 1);
                 }

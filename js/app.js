@@ -35,23 +35,36 @@
   var points = {
     atlanta: {
       center: {lat: 33.6407, lon: -84.4277, zoom: 9},
-      photos: {url: "photos/atl_airport.jpg", lat: 33.6407, lon: -84.4277, zoom: 9}
+      photos: {url: "photos/atl_airport.jpg", lat: 33.6407, lon: -84.4277}
     },
     heathrow: {
-      center: {lat: 51.4700, lon: 0.4543, zoom: 11}
+      center: {lat: 51.4700, lon: 0.4543, zoom: 11},
+      photos: {url: "photos/plane_to_geneva.jpg", lat: 51.4700, lon: 0.4543}
     },
     geneva: {
-      center: {lat: 46.2044, lon: 6.1432, zoom: 11}},
+      center: {lat: 46.2044, lon: 6.1432, zoom: 11},
+      photos: {url: "photos/fav_restaurant_geneva.jpg", lat: 46.2044, lon: 6.1432}
+    },
     sicily: {
-      center: {lat: 37.6000, lon: 14.0154, zoom: 7}},
+      center: {lat: 37.6000, lon: 14.0154, zoom: 7},
+      photos: {url: "photos/plane_to_Catania.jpg", lat: 37.6000, lon: 14.0154}
+    },
     ortygia: {
-      center: {lat: 37.0609, lon: 15.2941, zoom: 11}},
+      center: {lat: 37.0609, lon: 15.2941, zoom: 11},
+      photos: {url: "photos/walking_tour_group.jpg", lat: 37.0609, lon: 15.2941}
+    },
     noto: {
-      center: {lat: 36.8924, lon: 15.0652, zoom: 11}},
+      center: {lat: 36.8924, lon: 15.0652, zoom: 11},
+      photos: {url: "photos/walking_tour_group.jpg", lat: 36.8924, lon: 15.0652}
+    },
     mtEtna: {
-      center: {lat: 37.7510, lon: 14.9934, zoom: 10}},
+      center: {lat: 37.7510, lon: 14.9934, zoom: 10},
+      photos: {url: "photos/walking_tour_group.jpg", lat: 37.7510, lon: 14.9934}
+    },
     augusta: {
-      center: {lat: 37.2250, lon: 15.2217, zoom: 14.5}}
+      center: {lat: 37.2250, lon: 15.2217, zoom: 14.5},
+      photos: {url: "photos/via_megara.jpg", lat: 37.2250, lon: 15.2217}
+    }
   }
 
   $('#words').storymap({

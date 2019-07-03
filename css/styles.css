@@ -71,3 +71,8 @@ section {
     border-radius: 10px;
     min-height: 80vh;
 }
+
+.tooltip-image {
+  max-width: 400px;
+  max-height: 400px;
+}
