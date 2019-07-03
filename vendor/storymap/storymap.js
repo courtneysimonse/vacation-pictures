@@ -127,9 +127,10 @@
                     //fg.addLayer(L.circleMarker([center.lat, center.lon], markerOptions));
 
                     // add photos
-                    var point = L.circleMarker([photos.lat, photos.lon], markerOptions)
-                      .bindTooltip("<img class='tooltip-image' src='"+photos.url+"'>");
-                    fg.addLayer(point);
+                    for (var i = 0; i < photos.length; i++) {
+                      fg.addLayer(L.circleMarker([photos[i].lat, photos[i].lon], markerOptions)
+                        .bindTooltip("<img class='tooltip-image' src='"+photos[i].url+"'>"));
+                    }
 
                     map.setView([center.lat, center.lon], center.zoom, 1);
                 }
