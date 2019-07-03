@@ -118,14 +118,15 @@
                     map.setView(initPoint, initZoom, true);
                 } else if (markers[key]) {
                     var marker = markers[key];
+                    var center = marker.center
                     var layer = marker.layer;
                     if(typeof layer !== 'undefined'){
                       fg.addLayer(layer);
                     };
                     // change to circleMarker so marker is more easily customized
-                    fg.addLayer(L.circleMarker([marker.lat, marker.lon], markerOptions));
+                    fg.addLayer(L.circleMarker([center.lat, center.lon], markerOptions));
 
-                    map.setView([marker.lat, marker.lon], marker.zoom, 1);
+                    map.setView([center.lat, center.lon], center.zoom, 1);
                 }
 
             }

@@ -33,14 +33,25 @@
 
   // points for map to zoom to
   var points = {
-    atlanta: {lat: 33.6407, lon: -84.4277, zoom: 9},
-    heathrow: {lat: 51.4700, lon: 0.4543, zoom: 11},
-    geneva: {lat: 46.2044, lon: 6.1432, zoom: 11},
-    sicily: {lat: 37.6000, lon: 14.0154, zoom: 7},
-    ortygia: {lat: 37.0609, lon: 15.2941, zoom: 11},
-    noto: {lat: 36.8924, lon: 15.0652, zoom: 11},
-    mtEtna: {lat: 37.7510, lon: 14.9934, zoom: 10},
-    augusta: {lat: 37.2250, lon: 15.2217, zoom: 14.5}
+    atlanta: {
+      center: {lat: 33.6407, lon: -84.4277, zoom: 9},
+      photos: {url: "photos/atl_airport.jpg", lat: 33.6407, lon: -84.4277, zoom: 9}
+    },
+    heathrow: {
+      center: {lat: 51.4700, lon: 0.4543, zoom: 11}
+    },
+    geneva: {
+      center: {lat: 46.2044, lon: 6.1432, zoom: 11}},
+    sicily: {
+      center: {lat: 37.6000, lon: 14.0154, zoom: 7}},
+    ortygia: {
+      center: {lat: 37.0609, lon: 15.2941, zoom: 11}},
+    noto: {
+      center: {lat: 36.8924, lon: 15.0652, zoom: 11}},
+    mtEtna: {
+      center: {lat: 37.7510, lon: 14.9934, zoom: 10}},
+    augusta: {
+      center: {lat: 37.2250, lon: 15.2217, zoom: 14.5}}
   }
 
   $('#words').storymap({
@@ -52,9 +63,6 @@
       	subdomains: 'abcd',
       	maxZoom: 19
       }).addTo(map);
-
-      // add photos
-
 
       return map;
     }
