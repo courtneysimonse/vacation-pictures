@@ -3,8 +3,8 @@
   // map options
   var options = {
         zoomSnap: .5,
-        center: [0, 0],
-        zoom: 1,
+        center: [42.126900, -86.473867],
+        zoom: 5,
         zoomControl: false,
         attributionControl: false
       }
@@ -33,52 +33,61 @@
 
   // points for map to zoom to
   var points = {
-    atlanta: {
-      center: {lat: 33.6407, lon: -84.4277, zoom: 15},
-      photos: [{url: "photos/atl_airport.jpg", lat: 33.6407, lon: -84.4277},
-               {url: "photos/mom_glasses.jpg", lat: 33.6406, lon: -84.4276}]
+    samanthaHouse: {
+      center: {lat: 42.2401379, lon: -85.7326861, zoom: 15},
+      photos: [{url: "photos/IMG_1835.jpg", lat: 42.2401379, lon: -85.7326861},
+               {url: "photos/IMG_1844.jpg", lat: 42.2401379, lon: -85.7326861},
+               {url: "photos/IMG_1843.jpg", lat: 42.2401379, lon: -85.7326861},
+               {url: "photos/IMG_1842.jpg", lat: 42.2401379, lon: -85.7326861}]
     },
-    heathrow: {
-      center: {lat: 51.4700, lon: 0.4543, zoom: 15},
-      photos: [{url: "photos/plane_to_geneva.jpg", lat: 51.4700, lon: 0.4543},
-               {url: "photos/creepy_BA.jpg", lat: 51.4705, lon: 0.4540}]
+    bentonharbor: {
+      center: {lat: 42.126900, lon: -86.473867, zoom: 15},
+      photos: [{url: "photos/IMG_1833.jpg", lat: 42.125135, lon: -86.476620},
+               {url: "photos/IMG_1830.jpg", lat: 42.125135, lon: -86.476620},
+               {url: "photos/IMG_1831.jpg", lat: 42.125135, lon: -86.476620},
+               {url: "photos/IMG_1839.jpg", lat: 42.125135, lon: -86.476620},
+               {url: "photos/IMG_1838.jpg", lat: 42.125135, lon: -86.476620},
+               {url: "photos/IMG_1847.jpg", lat: 42.125135, lon: -86.476620},
+               {url: "photos/IMG_1827.jpg", lat: 42.125135, lon: -86.476620}]
     },
-    geneva: {
-      center: {lat: 46.2044, lon: 6.1432, zoom: 11},
-      photos: [{url: "photos/fav_restaurant_geneva.jpg", lat: 46.2100849, lon: 6.1482021},
-               {url: "photos/taking_pics_geneva.jpg", lat: 46.2084623, lon: 6.1489786}]
+    livery: {
+      center: {lat: 42.118095, lon: -86.4558787, zoom: 15},
+      photos: [{url: "photos/IMG_1833.jpg", lat: 42.118095, lon: -86.4558787}]
     },
-    sicily: {
-      center: {lat: 37.6000, lon: 14.0154, zoom: 7},
-      photos: [{url: "photos/plane_to_Catania.jpg", lat: 37.4666648, lon: 15.0583331}]
+    kalamazoo: {
+      center: {lat: 42.2401379, lon: -85.7326861, zoom: 15},
+      photos: [{url: "photos/IMG_1834.jpg", lat: 42.2401379, lon: -85.7326861},
+               {url: "photos/IMG_1850.jpg", lat: 42.2401379, lon: -85.7326861},
+               {url: "photos/IMG_1836.jpg", lat: 42.282908, lon: -85.6205599},
+               {url: "photos/IMG_1837.jpg", lat: 42.282908, lon: -85.7326861},
+               {url: "photos/IMG_1851.jpg", lat: 42.282908, lon: -85.7326861},
+               {url: "photos/IMG_1852.jpg", lat: 42.2565765, lon: -85.5752177}]
     },
-    ortygiaSights: {
-      center: {lat: 37.0609, lon: 15.2941, zoom: 13},
-      photos: [{url: "photos/duomo.jpg", lat: 37.0609, lon: 15.2941},
-               {url: "photos/big_anchor.jpg", lat: 37.0642391, lon: 15.2897138}]
+    raceday: {
+      center: {lat: 42.126900, lon: -86.473867, zoom: 15},
+      photos: [{url: "photos/IMG_1862.jpg", lat: 42.126180, lon: -86.475638},
+               {url: "photos/IMG_1870.jpg", lat: 42.126180, lon: -86.475638},
+               {url: "photos/IMG_1871.jpg", lat: 42.126180, lon: -86.475638},
+               {url: "photos/IMG_1864.jpg", lat: 42.1260012, lon: -86.4671076},
+               {url: "photos/IMG_1827.jpg", lat: 42.1260012, lon: -86.4671076},
+               {url: "photos/IMG_1895.jpg", lat: 42.1260012, lon: -86.4671076},
+               {url: "photos/IMG_1868.jpg", lat: 42.125135, lon: -86.476620},
+               {url: "photos/IMG_1865.jpg", lat: 42.125135, lon: -86.476620},
+             ]
     },
-    ortygiaFood: {
-      center: {lat: 37.0609, lon: 15.2941, zoom: 13},
-      photos: [{url: "photos/walking_tour_group.jpg", lat: 37.0609, lon: 15.2941},
-               {url: "photos/sparkling_wine.jpg", alt:"Locanda Del Collegio", lat: 37.0605781, lon: 15.2926479},
-               {url: "photos/white_wine.jpg", lat: 37.0605781, lon: 15.2926479},
-               {url: "photos/seafood.jpg", lat: 37.0605781, lon: 15.2926479},
-               {url: "photos/desserts.jpg", alt: "Bar Condorelli Ortigia", lat: 37.0594971, lon: 15.2928474},
-               {url: "photos/small_coffee.jpg", lat: 37.0647051, lon: 15.2922708},
-               {url: "photos/gelato.jpg", lat: 37.065626, lon: 15.293360},
-               {url: "photos/straciatella.jpg", lat: 37.065578, lon: 15.293172}]
+    terrahaute: {
+      center: {lat: 39.4667056, lon: -87.4088492, zoom: 15},
+      photos: [{url: "photos/IMG_1859.jpg", lat: 39.4667056, lon: -87.4088492},
+               {url: "photos/IMG_1860.jpg", lat: 39.4667056, lon: -87.4088492},
+               {url: "photos/IMG_1861.jpg", lat: 39.4667056, lon: -87.4088492}]
     },
-    noto: {
-      center: {lat: 36.8924, lon: 15.0652, zoom: 11},
-      photos: [{url: "photos/walking_tour_group.jpg", lat: 36.8924, lon: 15.0652}]
-    },
-    mtEtna: {
-      center: {lat: 37.7510, lon: 14.9934, zoom: 10},
-      photos: [{url: "photos/walking_tour_group.jpg", lat: 37.7510, lon: 14.9934}]
-    },
-    augusta: {
-      center: {lat: 37.2250, lon: 15.2217, zoom: 14.5},
-      photos: [{url: "photos/via_megara.jpg", lat: 37.2250, lon: 15.2217}]
+    vincennes: {
+      center: {lat: 38.6811435, lon: -87.5340393, zoom: 15},
+      photos: [{url: "photos/IMG_1853.jpg", lat: 38.6811435, lon: -87.5340393},
+               {url: "photos/IMG_1854.jpg", lat: 38.6811435, lon: -87.5340393},
+               {url: "photos/IMG_1855.jpg", lat: 38.6811019, lon: -87.5340393},
+               {url: "photos/IMG_1856.jpg", lat: 38.6841238, lon: -87.5227553},
+               {url: "photos/IMG_1857.jpg", lat: 38.6841238, lon: -87.5227553}]
     }
   }
 
