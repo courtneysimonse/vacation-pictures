@@ -55,7 +55,7 @@
       photos: [{url: "photos/IMG_1833.jpg", lat: 42.118095, lon: -86.4558787}]
     },
     kalamazoo: {
-      center: {lat: 42.2401379, lon: -85.7326861, zoom: 15},
+      center: {lat: 42.2401379, lon: -85.7326861, zoom: 10},
       photos: [{url: "photos/IMG_1834.jpg", lat: 42.2401379, lon: -85.7326861},
                {url: "photos/IMG_1850.jpg", lat: 42.2401379, lon: -85.7326861},
                {url: "photos/IMG_1836.jpg", lat: 42.282908, lon: -85.6205599},
