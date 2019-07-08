@@ -44,8 +44,8 @@
     },
     heathrow: {
       center: {lat: 51.4987524, lon: -0.5496845, zoom: 10},
-      photos: [{url: "photos/plane_to_geneva.jpg", lat: -0.5496845, lon: -0.5496845},
-               {url: "photos/creepy_BA.jpg", lat: -0.5496845, lon: -0.5496845}]
+      photos: [{url: "photos/plane_to_geneva.jpg", lat: 51.4987524, lon: -0.5496845},
+               {url: "photos/creepy_BA.jpg", lat: 51.4987524, lon: -0.5496845}]
     },
     geneva: {
       center: {lat: 46.2044, lon: 6.1432, zoom: 11},
