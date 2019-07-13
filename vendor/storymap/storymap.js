@@ -21,7 +21,8 @@
             markerOptions: {
               radius: 5,
               color: '#de2d26'
-            }
+            },
+            clustering: true
         };
 
         var settings = $.extend(defaults, options);
@@ -110,9 +111,17 @@
 
             var fg = L.featureGroup().addTo(map);
 
+            var clusteredMarkers = L.markerClusterGroup({
+              showCoverageOnHover: false,
+              maxClusterRadius: 50
+            });
+
             function showMapView(key) {
 
                 fg.clearLayers();
+
+                clusteredMarkers.clearLayers();
+
                 if (key === 'overview') {
                     map.setView(initPoint, initZoom, true);
                 } else if (markers[key]) {
@@ -128,8 +137,21 @@
 
                     // add photos
                     for (var i = 0; i < photos.length; i++) {
-                      fg.addLayer(L.circleMarker([photos[i].lat, photos[i].lon], markerOptions)
-                        .bindTooltip("<img class='tooltip-image' src='"+photos[i].url+"'>"));
+                      console.log(settings.clustering);
+                      if (settings.clustering == true) {
+
+                        clusteredMarkers.addLayer(L.circleMarker([photos[i].lat, photos[i].lon], markerOptions)
+                          .bindTooltip("<img class='tooltip-image' src='"+photos[i].url+"'>"));
+
+                        fg.addLayer(clusteredMarkers);
+
+                      } else {
+
+                        fg.addLayer(L.circleMarker([photos[i].lat, photos[i].lon], markerOptions)
+                          .bindTooltip("<img class='tooltip-image' src='"+photos[i].url+"'>"));
+
+                      }
+
                     }
 
                     map.setView([center.lat, center.lon], center.zoom, 1);
